@@ -39,12 +39,9 @@
 // >>>>>>> origin/main
 
 
-
-
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
-// import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 const Services = () => <h2 style={{ color: "white" }}>Services Page</h2>;

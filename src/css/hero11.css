@@ -1,9 +1,15 @@
 .hero-section {
     position: relative;
     width: 100%;
-    height: 100vh;
-    /* full screen height */
-    background-size: cover;
+    /* Full width of the parent container */
+    max-width: 100%;
+    /* Prevent horizontal overflow */
+    height: 90vh;
+    /* Use viewport height for better scaling */
+    overflow: hidden;
+
+    background-size: contain;
+    /* Show the full image */
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -15,7 +21,6 @@
     width: 100%;
     height: 100%;
     background-color: rgba(10, 20, 10, 0.5);
-    /* subtle dark overlay */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,8 +52,14 @@
     line-height: 1.6;
 }
 
-/* ✅ Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
+    .hero-section {
+        height: 60vh;
+        background-size: contain;
+        /* still show full image on small screens */
+    }
+
     .hero-content h1 {
         font-size: 42px;
     }

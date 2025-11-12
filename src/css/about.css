@@ -1,0 +1,98 @@
+/* body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background-color: #f0dba4;
+    color: #222;
+} */
+
+
+/* .welcome-section {
+    max-width: 100px;
+    margin: 80px auto;
+
+    padding: 10px 20px 120px 20px;
+    text-align: left;
+} */
+
+.welcome-section {
+    background-color:antiquewhite;
+    max-width: 1000px;
+    /* expands to normal readable width */
+    width: 90%;
+    /* keeps it responsive */
+    margin: 80px auto;
+    padding: 40px 20px;
+    text-align: left;
+}
+.title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 40px;
+}
+
+
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.text-block {
+    flex: 1;
+    min-width: 300px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.consult-button {
+    display: inline-block;
+    background-color: #3d1f17;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.consult-button:hover {
+    background-color: #592a1f;
+    transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .consult-button {
+        display: block;
+        margin: 35px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content {
+        flex-direction: row;
+    }
+
+    .text-block {
+        flex: 1;
+    }
+
+    .consult-button {
+        display: inline-block;
+    }
+} 
+
+
+
