@@ -1,17 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 /* Background and Section Styling */
 .welcome-section {
-    background-color: #F5F3EB;
-    /* Light cream/beige */
+    background-color: #F7F4EB;
     padding: 40px 80px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Geist', sans-serif;
     color: #000000;
-    /* Black text */
+    line-height: 32px;
+    
 }
 
 /* Header Styling */
 .title {
     font-size: 2rem;
-    /* Large distinct header */
     font-weight: 600;
     margin-bottom: 40px;
 }
@@ -27,17 +27,18 @@
 
 /* Paragraph Styling */
 .text-block {
+    font-family: 'Geist', sans-serif;
     flex: 1;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 18px;
+    line-height: 135%;
 }
 
 /* Button Styling */
 .consult-button {
     display: inline-block;
-    background-color: #3B0A13;
+    background-color: #31110F;
     /* Deep maroon/burgundy */
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     padding: 14px 28px;
     border-radius: 25px;

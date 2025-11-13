@@ -15,7 +15,7 @@
     width: 100%;
     height: 80vh;
     /* dynamic height based on screen size */
-    background-size: contain;
+    background-size: cover;
     /* show full image without cropping */
     background-position: center;
     background-repeat: no-repeat;

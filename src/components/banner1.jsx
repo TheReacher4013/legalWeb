@@ -12,7 +12,7 @@ const Banner1 = () => {
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
-                    borderRadius: "10px",
+                    // borderRadius: "10px",
                 }}
             ></div>
         </section>
