@@ -1,98 +1,105 @@
-/* body {
-    margin: 0;
-    font-family: "Inter", Arial, sans-serif;
-    background-color: #f0dba4;
-    color: #222;
-} */
-
-
-/* .welcome-section {
-    max-width: 100px;
-    margin: 80px auto;
-
-    padding: 10px 20px 120px 20px;
-    text-align: left;
-} */
-
+/* Background and Section Styling */
 .welcome-section {
-    background-color:antiquewhite;
-    max-width: 1000px;
-    /* expands to normal readable width */
-    width: 90%;
-    /* keeps it responsive */
-    margin: 80px auto;
-    padding: 40px 20px;
-    text-align: left;
+    background-color: #F5F3EB;
+    /* Light cream/beige */
+    padding: 40px 80px;
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    /* Black text */
 }
+
+/* Header Styling */
 .title {
-    font-size: 1.75rem;
+    font-size: 2rem;
+    /* Large distinct header */
     font-weight: 600;
-    color: #111;
     margin-bottom: 40px;
 }
 
-
+/* Container for Paragraphs */
 .content {
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: space-between;
     gap: 40px;
+    /* Space between paragraphs */
     margin-bottom: 40px;
 }
 
+/* Paragraph Styling */
 .text-block {
     flex: 1;
-    min-width: 300px;
+    font-size: 1rem;
     line-height: 1.6;
-    font-size: 0.95rem;
-    color: #333;
 }
 
+/* Button Styling */
 .consult-button {
     display: inline-block;
-    background-color: #3d1f17;
-    color: #fff;
+    background-color: #3B0A13;
+    /* Deep maroon/burgundy */
+    color: white;
     text-decoration: none;
-    padding: 12px 28px;
-    font-size: 0.95rem;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    text-align: center;
+    padding: 14px 28px;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-.consult-button:hover {
-    background-color: #592a1f;
-    transform: scale(1.05);
-}
-
-@media (max-width: 767px) {
-    .content {
-        flex-direction: column;
+/* Tablet View */
+@media (max-width: 900px) {
+    .welcome-section {
+        padding: 30px 40px;
     }
 
     .title {
-        text-align: center;
+        font-size: 1.75rem;
+        margin-bottom: 30px;
     }
 
-    .consult-button {
-        display: block;
-        margin: 35px;
-    }
-}
-
-
-@media (min-width: 768px) and (max-width: 1024px) {
     .content {
-        flex-direction: row;
+        flex-direction: column;
+        gap: 25px;
     }
 
     .text-block {
-        flex: 1;
+        font-size: 0.95rem;
     }
 
     .consult-button {
-        display: inline-block;
+        padding: 12px 24px;
+        font-size: 0.95rem;
+        border-radius: 20px;
     }
-} 
+}
 
+/* Mobile View */
+@media (max-width: 600px) {
+    .welcome-section {
+        padding: 20px 20px;
+    }
 
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
 
+    .content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .text-block {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .consult-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        border-radius: 18px;
+        width: 90%;
+        /* Full width button on mobile */
+        text-align: center;
+    }
+}
