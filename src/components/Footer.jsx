@@ -1,49 +1,47 @@
 import React from "react";
-import "./Footer.css";
+import "../css/Footer.css";
+import logo from "../assets/images/group1.png"; 
 
-const Footer = () => {
+export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-container">
-        
-        <div className="footer-about">
-          <h2>Jones &amp; Brown Legal</h2>
-          <p>Deep expertise, decisive courtroom presence</p>
+      
+      <div className="footer-header">
+        <img src={logo} alt="Jones & Brown Legal Logo" className="footer-logo" />
+        <h2 className="footer-title">Jones & Brown Legal</h2>
+      </div>
+
+      
+      <p className="footer-tagline">
+        Deep expertise, decisive courtroom presence
+      </p>
+
+      
+      <div className="footer-middle">
+        <div className="footer-column">
+          <p><a href="mailto:hello@figma.com">hello@figma.com</a></p>
+          <p><a href="tel:+15551234567">(555) 123-4567</a></p>
         </div>
 
-        
-        <div className="footer-contact">
-          <h3>Contact</h3>
-          <p>
-            <a href="mailto:hello@figma.com">hello@figma.com</a>
-          </p>
-          <p>
-            <a href="tel:+15551234567">(555) 123-4567</a>
-          </p>
-          <address>
-            123 Candyland Lane<br />
-            Suite 123<br />
-            Los Angeles, CA 94117
-          </address>
+        <div className="footer-column">
+          <p>123 Candyland Lane</p>
+          <p>Suite 123</p>
+          <p>Los Angeles, CA 94117</p>
         </div>
 
-        
-        <div className="footer-social">
-          <h3>Follow Us</h3>
-          <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Bluesky</a></li>
-          </ul>
+        <div className="footer-column">
+          <p><a href="#">Instagram</a></p>
+          <p><a href="#">Facebook</a></p>
+          <p><a href="#">LinkedIn</a></p>
+          <p><a href="#">Bluesky</a></p>
         </div>
       </div>
 
+      
       <div className="footer-bottom">
-        <p>© 2025 Jones &amp; Brown Legal. All Rights Reserved.</p>
+        <p>Jones & Brown Legal<br />
+        © 2025 All Rights Reserved</p>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

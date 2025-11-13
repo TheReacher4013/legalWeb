@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "./Services.css";
-
+import "../css/Services.css";
 
 const Counter = ({ target, suffix = "" }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     let start = 0;
-    const duration = 1500; 
+    const duration = 1500;
     const stepTime = 20;
     const steps = duration / stepTime;
     const increment = target / steps;
@@ -35,9 +34,14 @@ const Counter = ({ target, suffix = "" }) => {
 const Services = () => {
   return (
     <div className="services-page">
-      
+      {/* 🌟 Header Section with Top Image */}
       <header className="services-header">
-        <h1>Our Services</h1>
+        <img
+          src="/images/services-header.jpg"
+          alt="Law firm office"
+          className="header-image"
+        />
+
         <p>
           At <strong>Jones &amp; Brown Legal</strong>, we are committed to
           exceptional service and successful outcomes.
@@ -58,11 +62,13 @@ const Services = () => {
           </div>
         </div>
 
-        <h3 className="tagline">Navigating Complex Legal Landscapes? We Can Help.</h3>
+        <h3 className="tagline">
+          Navigating Complex Legal Landscapes? We Can Help.
+        </h3>
         <button className="consult-btn">Schedule a Consult</button>
       </header>
 
-      
+      {/* ⚖️ Services Section */}
       <section className="services-list">
         <div className="service">
           <h2>Business and Corporate Law</h2>
@@ -133,27 +139,14 @@ const Services = () => {
         </div>
       </section>
 
-      
-      <footer className="services-footer">
-        <p className="footer-tagline">Deep expertise, decisive courtroom presence</p>
-
-        <div className="contact-info">
-          <p><a href="mailto:hello@figma.com">hello@figma.com</a></p>
-          <p>(555) 123-4567</p>
-          <p>123 Candyland Lane, Suite 123<br />Los Angeles, CA 94117</p>
-        </div>
-
-        <div className="social-links">
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">Bluesky</a>
-        </div>
-
-        <p className="copyright">
-          © 2025 Jones &amp; Brown Legal — All Rights Reserved
-        </p>
-      </footer>
+      {/* 🖼️ Bottom Image */}
+      <div className="bottom-image-container">
+        <img
+          src="/images/services-footer.jpg"
+          alt="Team working together"
+          className="bottom-image"
+        />
+      </div>
     </div>
   );
 };
