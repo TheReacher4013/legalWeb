@@ -1,9 +1,9 @@
 import React from 'react'
 
-const scheduleConsult = () => {
+const ScheduleConsult = () => {
   return (
     <div>scheduleConsult</div>
   )
 }
 
-export default scheduleConsult
+export default ScheduleConsult
