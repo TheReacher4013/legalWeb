@@ -1,18 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
 .footer {
   background-color: #f9f6ef;
   color: #111;
-  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Geist', sans-serif;
   padding: 60px 100px;
 }
 
 .footer-header {
   display: flex;
-  align-items:center;
-  justify-content: flex-start; /* Left align */
-  gap: 800px; /* Logo aur title ke beech gap */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px; /* Desktop/Tablet gap */
   margin-bottom: 20px;
-  flex-wrap: wrap; /* Small screens ke liye */
+  flex-wrap: wrap;
 }
+
+@media (max-width: 500px) {
+  .footer-header {
+    gap: 0; /* Mobile pe no gap */
+    justify-content: center; /* Center align mobile me */
+  }
+
+  .footer-title {
+    font-size: 1.5rem; /* Mobile font adjust */
+  }
+
+  .footer-logo {
+    width: 36px; /* Ya chhota kar sakte ho agar chaho */
+  }
+}
+
 
 .footer-logo {
   width: 36px;
@@ -31,6 +49,7 @@
   font-size: 1rem;
   color: #333;
   margin-bottom: 50px;
+  
 }
 
 .footer-middle {
@@ -83,6 +102,7 @@
   .footer-header {
     justify-content: left;
     gap: 400px;
+    gap: 20;
   }
 
   .footer-middle {
