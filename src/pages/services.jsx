@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../css/Services.css";
-import top from "../assets/images/top.png";       // ✅ Make sure this file exists
-import bottom from "../assets/images/bottom.png"; // ✅ Make sure this file exists
+import top from "../assets/images/top.png";       // Make sure this file exists
+import bottom from "../assets/images/bottom.png"; // Make sure this file exists
 
 // --- Counter Component ---
 const Counter = ({ target, suffix = "" }) => {

@@ -70,7 +70,7 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .offer-list {
         font-size: 40px;
     }
@@ -93,5 +93,89 @@
 
     .offer-list {
         font-size: 34px;
+    }
+} */
+
+/* @media (max-width: 1024px) {
+
+    .offer-section {
+        flex-direction: column;
+        
+        align-items: flex-start;
+       
+        gap: 40px;
+        padding: 60px 20px;
+    }
+
+    .offer-left,
+    .offer-right {
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .offer-list {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .offer-list {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+} */
+
+/* 🌙 Tablet View */
+@media (max-width: 1024px) {
+
+    .offer-list p,
+    .offer-more {
+        font-size: 34px;
+        /* Thoda chhota */
+    }
+
+    .offer-section {
+        padding: 50px 20px;
+    }
+}
+
+
+
+/* 📱 Mobile View */
+@media (max-width: 768px) {
+    .offer-heading {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .offer-list {
+        gap: 6px;
+    }
+
+    .offer-list p,
+    .offer-more {
+        font-size: 28px;
+        /* Mobile ke liye perfect */
+        line-height: 1.2;
+    }
+
+    .offer-btn {
+        margin-top: 30px;
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+}
+
+
+
+/* 📱 Small Mobile (iPhone SE, 320–375px) */
+@media (max-width: 480px) {
+
+    .offer-list p,
+    .offer-more {
+        font-size: 24px;
+        /* Smaller phones */
     }
 }
