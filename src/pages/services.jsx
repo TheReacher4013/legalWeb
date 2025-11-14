@@ -56,7 +56,6 @@ const Counter = ({ target, suffix = "" }) => {
 const Services = () => {
   return (
     <div className="services-container">
-      {/* 🔹 Top Image */}
       <div className="services-top-image">
         <img src={top} alt="Our Legal Expertise" />
       </div>
@@ -88,13 +87,13 @@ const Services = () => {
         <div className="service-category">
           <h4>Business and Corporate Law</h4>
           <ul>
-            <li>Business formation (LLC, corporations, partnerships)</li>
-            <li>Contract drafting and review</li>
-            <li>Mergers and acquisitions</li>
-            <li>Intellectual property protection</li>
-            <li>Employment law and workplace policies</li>
-            <li>Corporate governance</li>
-            <li>Shareholder and partnership disputes</li>
+            <ol>Business formation (LLC, corporations, partnerships)</ol>
+            <ol>Contract drafting and review</ol>
+            <ol>Mergers and acquisitions</ol>
+            <ol>Intellectual property protection</ol>
+            <ol>Employment law and workplace policies</ol>
+            <ol>Corporate governance</ol>
+            <ol>Shareholder and partnership disputes</ol>
           </ul>
         </div>
 
@@ -102,12 +101,12 @@ const Services = () => {
         <div className="service-category">
           <h4>Litigation and Dispute Resolution</h4>
           <ul>
-            <li>Civil litigation</li>
-            <li>Commercial litigation</li>
-            <li>Arbitration and mediation</li>
-            <li>Class action lawsuits</li>
-            <li>Personal injury claims</li>
-            <li>Product liability cases</li>
+            <ol>Civil litigation</ol>
+            <ol>Commercial litigation</ol>
+            <ol>Arbitration and mediation</ol>
+            <ol>Class action lawsuits</ol>
+            <ol>Personal injury claims</ol>
+            <ol>Product liability cases</ol>
           </ul>
         </div>
 
@@ -115,11 +114,11 @@ const Services = () => {
         <div className="service-category">
           <h4>Family Law</h4>
           <ul>
-            <li>Divorce and separation</li>
-            <li>Child custody and support</li>
-            <li>Prenuptial and postnuptial agreements</li>
-            <li>Adoption and surrogacy</li>
-            <li>Domestic violence protection</li>
+            <ol>Divorce and separation</ol>
+            <ol>Child custody and support</ol>
+            <ol>Prenuptial and postnuptial agreements</ol>
+            <ol>Adoption and surrogacy</ol>
+            <ol>Domestic violence protection</ol>
           </ul>
         </div>
 
@@ -127,11 +126,11 @@ const Services = () => {
         <div className="service-category">
           <h4>Criminal Defense</h4>
           <ul>
-            <li>DUI and traffic offenses</li>
-            <li>White collar crime defense</li>
-            <li>Drug charges</li>
-            <li>Assault and battery cases</li>
-            <li>Expungements and record sealing</li>
+            <ol>DUI and traffic offenses</ol>
+            <ol>White collar crime defense</ol>
+            <ol>Drug charges</ol>
+            <ol>Assault and battery cases</ol>
+            <ol>Expungements and record sealing</ol>
           </ul>
         </div>
 
@@ -139,10 +138,10 @@ const Services = () => {
         <div className="service-category">
           <h4>Real Estate Law</h4>
           <ul>
-            <li>Property transactions (buying, selling, leasing)</li>
-            <li>Land use and zoning</li>
-            <li>Construction and land use</li>
-            <li>Real estate development</li>
+            <ol>Property transactions (buying, selling, leasing)</ol>
+            <ol>Land use and zoning</ol>
+            <ol>Construction and land use</ol>
+            <ol>Real estate development</ol>
           </ul>
         </div>
 
@@ -150,18 +149,18 @@ const Services = () => {
         <div className="service-category">
           <h4>Immigration Law</h4>
           <ul>
-            <li>Visa applications</li>
-            <li>Green cards and citizenship</li>
-            <li>Deportation defense</li>
-            <li>Employment-based immigration</li>
+            <ol>Visa applications</ol>
+            <ol>Green cards and citizenship</ol>
+            <ol>Deportation defense</ol>
+            <ol>Employment-based immigration</ol>
           </ul>
         </div>
       </section>
 
-      {/* 🔹 Bottom Image */}
-      <div className="services-bottom-image">
-        <img src={bottom} alt="Trusted Legal Team" />
-      </div>
+    <div className="services-bottom-image">
+  <img src={bottom} alt="Trusted Legal Team" />
+</div>
+
     </div>
   );
 };
