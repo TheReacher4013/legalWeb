@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+.offer-section {
+    width: 100%;
+    min-height: 10vh;
+    background: #0D1F08;
+    color: #F7F4EB;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* TOP align */
+    padding: 60px;
+    gap: 60px;
+    /* big spacing like your layout */
+    font-family: "Geist", sans-serif;
+}
+
+/* Left side small heading */
+.offer-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.offer-heading {
+    font-family: "Geist", sans-serif;
+    font-size: 28px;
+    /* small text */
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #F7F4EB;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Right side big list */
+.offer-right {
+    flex: 2;
+}
+
+.offer-list {
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.more {
+    color: #FFF0C4;
+}
+
+.seri-button {
+    margin-top: 35px;
+    margin-bottom: 25px;
+    padding: 12px 18px;
+    background: #FFFFFF;
+    color: #000000;
+    border-radius: 105px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-family: inherit;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.seri-button:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .offer-list {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .offer-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+        gap: 40px;
+    }
+
+    .offer-left,
+    .offer-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .offer-list {
+        font-size: 34px;
+    }
+}

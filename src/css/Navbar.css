@@ -73,7 +73,7 @@
       color: #a1a1a1;
   }
 
- /* ✅ Tablet view (600px - 900px) */
+ /* Tablet view (600px - 900px) */
  @media (max-width: 900px) {
      .navbar {
          padding: 15px 30px;
