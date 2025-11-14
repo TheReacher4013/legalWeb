@@ -1,79 +1,94 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../css/Services.css";
+import top from "../assets/images/top.png";       // ✅ Make sure this file exists
+import bottom from "../assets/images/bottom.png"; // ✅ Make sure this file exists
 
+// --- Counter Component ---
 const Counter = ({ target, suffix = "" }) => {
   const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
 
+  // Detect when element becomes visible
   useEffect(() => {
-    let start = 0;
-    const duration = 1500;
-    const stepTime = 20;
-    const steps = duration / stepTime;
-    const increment = target / steps;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
 
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= target) {
-        start = target;
-        clearInterval(timer);
-      }
-      setCount(Math.floor(start));
-    }, stepTime);
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
 
-    return () => clearInterval(timer);
-  }, [target]);
+  // Smooth counter animation
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const duration = 2000;
+    const startTime = performance.now();
+
+    const updateCounter = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeOut = 1 - Math.pow(1 - progress, 4);
+      const value = Math.floor(easeOut * target);
+      setCount(value);
+      if (progress < 1) requestAnimationFrame(updateCounter);
+    };
+
+    requestAnimationFrame(updateCounter);
+  }, [isVisible, target]);
 
   return (
-    <h2 className="counter">
+    <h2 ref={ref}>
       {count}
       {suffix}
     </h2>
   );
 };
 
+// --- Main Services Component ---
 const Services = () => {
   return (
-    <div className="services-page">
-      {/* 🌟 Header Section with Top Image */}
-      <header className="services-header">
-        <img
-          src="/images/services-header.jpg"
-          alt="Law firm office"
-          className="header-image"
-        />
+    <div className="services-container">
+      {/* 🔹 Top Image */}
+      <div className="services-top-image">
+        <img src={top} alt="Our Legal Expertise" />
+      </div>
 
-        <p>
-          At <strong>Jones &amp; Brown Legal</strong>, we are committed to
-          exceptional service and successful outcomes.
-        </p>
-
-        <div className="stats">
-          <div>
-            <Counter target={30} suffix="+" />
-            <p>Years of Experience</p>
-          </div>
-          <div>
-            <Counter target={98} suffix="%" />
-            <p>Success Rate in Court</p>
-          </div>
-          <div>
-            <Counter target={120} suffix="+" />
-            <p>Attorneys at Hand</p>
-          </div>
+      {/* --- Top Stats Section --- */}
+      <section className="top-stats">
+        <div>
+          <Counter target={30} suffix="+" />
+          <p>Years of Experience</p>
         </div>
+        <div>
+          <Counter target={98} suffix="%" />
+          <p>Success Rate in Court</p>
+        </div>
+        <div>
+          <Counter target={120} suffix="+" />
+          <p>Attorneys at Hand</p>
+        </div>
+      </section>
 
-        <h3 className="tagline">
-          Navigating Complex Legal Landscapes? We Can Help.
-        </h3>
-        <button className="consult-btn">Schedule a Consult</button>
-      </header>
+      {/* --- Services Section --- */}
+      <section className="services-section">
+        <h2>
+          Navigating Complex Legal Landscapes? <br />
+          <span>We Can Help.</span>
+        </h2>
 
-      {/* ⚖️ Services Section */}
-      <section className="services-list">
-        <div className="service">
-          <h2>Business and Corporate Law</h2>
+        {/* Category 1 */}
+        <div className="service-category">
+          <h4>Business and Corporate Law</h4>
           <ul>
-            <li>Business formation (LLCs, corporations, partnerships)</li>
+            <li>Business formation (LLC, corporations, partnerships)</li>
             <li>Contract drafting and review</li>
             <li>Mergers and acquisitions</li>
             <li>Intellectual property protection</li>
@@ -83,8 +98,9 @@ const Services = () => {
           </ul>
         </div>
 
-        <div className="service">
-          <h2>Litigation and Dispute Resolution</h2>
+        {/* Category 2 */}
+        <div className="service-category">
+          <h4>Litigation and Dispute Resolution</h4>
           <ul>
             <li>Civil litigation</li>
             <li>Commercial litigation</li>
@@ -95,8 +111,9 @@ const Services = () => {
           </ul>
         </div>
 
-        <div className="service">
-          <h2>Family Law</h2>
+        {/* Category 3 */}
+        <div className="service-category">
+          <h4>Family Law</h4>
           <ul>
             <li>Divorce and separation</li>
             <li>Child custody and support</li>
@@ -106,30 +123,32 @@ const Services = () => {
           </ul>
         </div>
 
-        <div className="service">
-          <h2>Criminal Defense</h2>
+        {/* Category 4 */}
+        <div className="service-category">
+          <h4>Criminal Defense</h4>
           <ul>
             <li>DUI and traffic offenses</li>
-            <li>White-collar crime defense</li>
+            <li>White collar crime defense</li>
             <li>Drug charges</li>
             <li>Assault and battery cases</li>
             <li>Expungements and record sealing</li>
           </ul>
         </div>
 
-        <div className="service">
-          <h2>Real Estate Law</h2>
+        {/* Category 5 */}
+        <div className="service-category">
+          <h4>Real Estate Law</h4>
           <ul>
             <li>Property transactions (buying, selling, leasing)</li>
-            <li>Landlord-tenant disputes</li>
-            <li>Zoning and land use</li>
-            <li>Construction law</li>
+            <li>Land use and zoning</li>
+            <li>Construction and land use</li>
             <li>Real estate development</li>
           </ul>
         </div>
 
-        <div className="service">
-          <h2>Immigration Law</h2>
+        {/* Category 6 */}
+        <div className="service-category">
+          <h4>Immigration Law</h4>
           <ul>
             <li>Visa applications</li>
             <li>Green cards and citizenship</li>
@@ -139,13 +158,9 @@ const Services = () => {
         </div>
       </section>
 
-      {/* 🖼️ Bottom Image */}
-      <div className="bottom-image-container">
-        <img
-          src="/images/services-footer.jpg"
-          alt="Team working together"
-          className="bottom-image"
-        />
+      {/* 🔹 Bottom Image */}
+      <div className="services-bottom-image">
+        <img src={bottom} alt="Trusted Legal Team" />
       </div>
     </div>
   );
