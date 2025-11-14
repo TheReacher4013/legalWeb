@@ -5,12 +5,13 @@
   padding: 60px 100px;
 }
 
-
 .footer-header {
   display: flex;
-  align-items: center;
-  gap: 800px;
+  align-items:center;
+  justify-content: flex-start; /* Left align */
+  gap: 800px; /* Logo aur title ke beech gap */
   margin-bottom: 20px;
+  flex-wrap: wrap; /* Small screens ke liye */
 }
 
 .footer-logo {
@@ -23,11 +24,8 @@
   font-size: 1.8rem;
   font-weight: 300; 
   color: #0b0505;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
-
-
-
 
 .footer-tagline {
   font-size: 1rem;
@@ -35,11 +33,11 @@
   margin-bottom: 50px;
 }
 
-
 .footer-middle {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 80px; /* Columns ke beech gap */
   margin-bottom: 60px;
 }
 
@@ -61,7 +59,6 @@
   text-decoration: underline;
 }
 
-
 .footer-bottom {
   font-size: 0.9rem;
   color: #111;
@@ -76,25 +73,45 @@
   margin: 0;
 }
 
-
-
+/* Responsive CSS */
 @media (max-width: 900px) {
   .footer {
     padding: 40px 20px;
-    text-align: center;
+    text-align: left;
   }
 
   .footer-header {
-    justify-content: center;
+    justify-content: left;
+    gap: 400px;
   }
 
   .footer-middle {
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+  }
+
+  .footer-column {
+    text-align: left;
   }
 
   .footer-bottom {
-    flex-direction: column;
-    gap: 8px;
+    text-align: left;
+    padding-top: 15px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-title {
+    font-size: 1.5rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.9rem;
+  }
+
+  .footer-column {
+    min-width: 100%;
   }
 }
