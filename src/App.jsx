@@ -4,19 +4,15 @@ import Home from "./pages/home";
 import Footer from "./components/Footer";
 import Services from "./pages/services";
 import Navbar from "./components/Navbar";
+import ScheduleConsult from "./pages/ScheduleConsult";
 
 
-const ScheduleConsult = () => (
-  <h2 style={{ color: "white", textAlign: "center" }}>
-    Schedule a Consult Page
-  </h2>
-);
 
 function App() {
   return (
     <Router>
                 <Navbar />
-    
+              
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />

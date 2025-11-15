@@ -1,0 +1,99 @@
+.schedule {
+  background: #2b0d0d;   
+  color: #ffffff;
+  padding-bottom: 50px;
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.hero-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+
+.hero-text {
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+}
+
+.content {
+  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+/* Headings */
+.section-heading {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.section-subheading {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* STEP ROW */
+.step-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+
+.step-number {
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 1;
+  color: white;
+}
+
+
+.step-content h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.step-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+
+.discover {
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 25px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.consult-btn {
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
