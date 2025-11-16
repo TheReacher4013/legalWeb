@@ -1,39 +1,27 @@
 import React from "react";
 import "../css/hero11.css";
-import bgImage from "../assets/images/hero.jpg";
+// import bgImage from "../assets/images/hero.jpg";
 
 const HeroSection = () => {
     return (
         <section
-            className="hero-section"
-            style={{ backgroundImage: `url(${bgImage})` }}
+            className="hero_section"
+            
         >
             {/* Overlay for dark shade */}
-            <div className="hero-overlay">
-
-                {/* Main content container */}
-                <div className="hero-content">
-
-                    {/* Heading */}
-                    <div className="hero-heading">
-                        <h1>Jones & Brown Legal</h1>
-                    </div>
-
-                    {/* Tagline */}
-                    <div className="hero-tagline">
-                        <p className="tagline">Deep expertise, decisive courtroom presence</p>
-                    </div>
-
-                    {/* Subtext */}
-                    <div className="hero-subtext">
-                        <p className="subtext">
-                            We've been serving the Los Angeles area with <br/>expert legal counsel
-                            since 1976.
-                        </p>
-                    </div>
-
+            <header>
+                <div className="hero_heading">
+                    <h1>Jones & Brown Legal</h1>
                 </div>
-            </div>
+                <div className="hero_subheading">
+                    <h3>
+                        Deep expertise, decisive courtroom presence
+                    </h3>
+                    <p>
+                        We've been serving the Los Angeles area with<br/> expert legal counsel since 1976.
+                    </p>
+                </div>
+            </header>
         </section>
     );
 };
