@@ -8,11 +8,12 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 60px;
-    gap: 60px;
+    padding: 3.75rem;
+    /* 60px */
+    gap: 3.75rem;
+    /* 60px */
     font-family: "Geist", sans-serif;
 }
-
 
 .offer-left {
     flex: 1;
@@ -22,7 +23,8 @@
 
 .offer-heading {
     font-family: "Geist", sans-serif;
-    font-size: 28px;
+    font-size: 1.75rem;
+    /* 28px */
     font-weight: 500;
     letter-spacing: 0.5px;
     color: #F7F4EB;
@@ -32,13 +34,13 @@
     align-items: flex-start;
 }
 
-
 .offer-right {
     flex: 2;
 }
 
 .offer-list {
-    font-size: 38px;
+    font-size: 2.375rem;
+    /* 38px */
     line-height: 1.2;
     font-weight: 500;
 }
@@ -48,15 +50,20 @@
 }
 
 .seri-button {
-    margin-top: 35px;
-    margin-bottom: 25px;
-    padding: 12px 18px;
+    margin-top: 2.1875rem;
+    /* 35px */
+    margin-bottom: 1.5625rem;
+    /* 25px */
+    padding: 0.75rem 1.125rem;
+    /* 12px 18px */
     background: #FFFFFF;
     color: #000000;
-    border-radius: 105px;
+    border-radius: 6.5625rem;
+    /* 105px */
     cursor: pointer;
     display: inline-block;
-    font-size: 14px;
+    font-size: 0.875rem;
+    /* 14px */
     font-family: inherit;
     text-decoration: none;
     transition: 0.2s ease;
@@ -66,42 +73,50 @@
     transform: scale(1.05);
 }
 
-
-@media screen and (max-width: 480px) {
+/* Mobile: ≤480px */
+@media screen and (max-width: 30rem) {
 
     .offer-list p,
     .offer-more {
-        font-size: 24px;
+        font-size: 1.5rem;
+        /* 24px */
     }
 }
-@media screen and (max-width: 1024px) {
+
+/* Tablet: ≤1024px */
+@media screen and (max-width: 64rem) {
 
     .offer-section {
         display: flex;
         text-align: left;
         flex-direction: column;
-
-        gap: 30px;
-        padding: 40px 20px;
+        gap: 1.875rem;
+        /* 30px */
+        padding: 2.5rem 1.25rem;
+        /* 40px 20px */
     }
+
     .offer-left {
         display: flex;
         text-align: right;
     }
+
     .offer-right {
         width: 100%;
     }
+
     .offer-btn {
         width: 100%;
         text-align: center;
     }
 }
 
-
-@media screen and (max-width: 768px) {
+/* Small Tablet / Mobile: ≤768px */
+@media screen and (max-width: 48rem) {
 
     .offer-title h2 {
-        font-size: 22px;
+        font-size: 1.375rem;
+        /* 22px */
         text-align: right;
     }
 
@@ -111,11 +126,13 @@
     }
 
     .offer-list p {
-        font-size: 15px;
+        font-size: 0.9375rem;
+        /* 15px */
     }
 
     .offer-btn button {
         width: 100%;
-        font-size: 16px;
+        font-size: 1rem;
+        /* 16px */
     }
 }

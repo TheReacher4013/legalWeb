@@ -9,32 +9,24 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* Desktop – full cover */
 }
 
-/* ---------- Tablet View ---------- */
 @media screen and (max-width: 1024px) {
     .banner1 {
         height: auto;
-        /* auto height = full image is visible */
         background-size: contain;
-        /* show full image */
         background-position: center;
         background-color: #000;
-        /* removes white space */
         padding-bottom: 40%;
-        /* maintains proper aspect ratio */
     }
 }
 
-/* ---------- Mobile View ---------- */
-@media screen and(max-width: 768px) {
+@media screen and (max-width: 768px) {
     .banner1 {
         height: auto;
         background-size: contain;
         background-position: center;
         background-color: #000;
         padding-bottom: 60%;
-        /* bigger aspect ratio for mobile */
     }
 }

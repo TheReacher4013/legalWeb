@@ -4,7 +4,7 @@ import Home from "./pages/home";
 import Footer from "./components/Footer";
 import Services from "./pages/services";
 import Navbar from "./components/Navbar";
-import ScheduleConsult from "./pages/ScheduleConsult";
+import ScheduleConsult from "./pages/ScheduleAndConsult";
 
 
 

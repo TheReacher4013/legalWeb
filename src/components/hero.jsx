@@ -1,72 +1,35 @@
 import React from "react";
+import { motion } from "motion/react";
 import "../css/hero11.css";
-// import bgImage from "../assets/images/hero.jpg";
 
 const HeroSection = () => {
     return (
-        <section
-            className="hero_section"
-            
-        >
-            {/* Overlay for dark shade */}
+        <section className="hero_section">
             <header>
-                <div className="hero_heading">
+                <motion.div
+                    className="hero_heading"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                >
                     <h1>Jones & Brown Legal</h1>
-                </div>
-                <div className="hero_subheading">
-                    <h3>
-                        Deep expertise, decisive courtroom presence
-                    </h3>
+                </motion.div>
+
+                <motion.div
+                    className="hero_subheading"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                >
+                    <h3>Deep expertise, decisive courtroom presence</h3>
                     <p>
-                        We've been serving the Los Angeles area with<br/> expert legal counsel since 1976.
+                        We've been serving the Los Angeles area with<br />
+                        expert legal counsel since 1976.
                     </p>
-                </div>
+                </motion.div>
             </header>
         </section>
     );
 };
 
 export default HeroSection;
-
-
-
-
-
-// import React from "react";
-// import "../css/hero11.css";
-// import bgImage from "../assets/images/hero.jpg";
-
-// const HeroSection = () => {
-//     return (
-//         <section
-//             className="hero-section"
-//             style={{ backgroundImage: `url(${bgImage})` }}
-//         >
-//             <div className="hero-overlay">
-//                 <div className="hero-content">
-//                     {/* Heading */}
-//                     <div className="hero-heading">
-//                         <h1>Jones & Brown Legal</h1>
-//                     </div>
-
-//                     {/* Bottom text area */}
-//                     <div className="hero-bottom">
-//                         <div className="hero-left">
-//                             <p className="tagline">
-//                                 Deep expertise,decisive courtroom presence
-//                             </p>
-//                         </div>
-//                         <div className="hero-right">
-//                             <p className="subtext">
-//                                 We've been serving the Los Angeles area with <br/>xpert legal
-//                                 counsel since 1976.
-//                             </p>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// };
-
-// export default HeroSection;

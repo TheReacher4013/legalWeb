@@ -1,103 +1,186 @@
-.schedule {
-  background: #2b0d0d;   
-  color: #ffffff;
-  padding-bottom: 50px;
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+.steps-container {
+  background: #1F0808;
+  color: #FFFFFF;
+  padding: 5rem 2.5rem;
+  font-family: Arial, sans-serif;
 }
 
 
-.hero {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+.steps-title {
+  font-size: 1.75rem;
+  margin-bottom: 2.5rem;
+  margin-right: 25rem;
+  line-height: 1.4;
+  text-align: left;
 }
 
 
-.hero-img {
-  width: 100%;
-  height: 360px;
-  object-fit: cover;
-<<<<<<< HEAD
-  /* border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px; */
-=======
-  
->>>>>>> 7f7b1e576834673c452c98f1c7156dc4a2f20a90
-}
-
-
-.hero-text {
-  position: absolute;
-  bottom: 20px;
-  left: 25px;
-  font-size: 32px;
-  font-weight: 600;
-  color: white;
-}
-
-.content {
-  width: 90%;
-  margin: auto;
-  margin-top: 40px;
-}
-
-/* Headings */
-.section-heading {
-  font-size: 20px;
-  margin-bottom: 4px;
-}
-
-.section-subheading {
-  font-size: 18px;
-  margin-bottom: 25px;
-}
-
-/* STEP ROW */
-.step-row {
+.step-item {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
   align-items: flex-start;
-  gap: 20px;
-  border-top: 1px solid rgba(255,255,255,0.3);
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 2.5rem 0;
+  gap: 2.5rem;
 }
 
-
-.step-number {
-  font-size: 80px;
-  font-weight: 300;
-  line-height: 1;
-  color: white;
+.step-content {
+  max-width: 37.5rem;
+  text-align: left;
 }
 
-
-.step-content h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: 500;
+.step-content h3 {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+  font-size: 1.375rem;
+  margin-bottom: 0.625rem;
+  margin-right: 18.75rem;
 }
 
 .step-content p {
-  font-size: 14px;
-  line-height: 1.6;
-  opacity: 0.9;
+  margin: 0;
+}
+
+.step-number {
+  font-size: 13.75rem;
+  font-weight: 300;
+  min-width: 6.25rem;
+  text-align: right;
+  margin-left: 9.375rem;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 
-.discover {
-  border-top: 1px solid rgba(255,255,255,0.3);
-  padding-top: 25px;
-  margin-top: 10px;
+.lastPdiv {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  gap: 2.5rem;
+  margin-left: 4rem;
+  padding-top: 5rem;
+}
+
+.lastPdiv p {
+  font-size: 1.875rem;
+  font-weight: 300;
+}
+
+.consult-btn-wrapper {
+  width: fit-content;
+  margin-left: auto;
 }
 
 .consult-btn {
-  padding: 10px 20px;
-  background: white;
-  color: black;
-  border-radius: 20px;
+  background: #FFFFFF;
+  color: #000000;
   border: none;
-  cursor: pointer;
-  font-weight: 500;
+  border-radius: 1.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.875rem 2.125rem;
+  margin-top: -3rem;
+  margin-bottom: 1.5em;
+  display: block;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 64rem) {
+  hr {
+    width: calc(100% - 3rem);
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .steps-title {
+    margin-left: 3rem;
+    font-size: 1.5rem;
+  }
+
+  .step-content {
+    max-width: 28rem;
+  }
+
+  .step-number {
+    font-size: 10rem;
+    margin-left: .5rem;
+  }
+
+  .lastPdiv {
+    margin-left: 3rem;
+    gap: 1.25rem;
+  }
+
+  .consult-btn {
+    margin-bottom: 1.2em;
+    padding: 0.8rem 2rem;
+  }
+}
+
+
+@media screen and (max-width: 48rem) {
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .steps-container {
+    padding: 2rem 1rem;
+    overflow-x: hidden;
+  }
+
+  .steps-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    width: 100%;
+  }
+
+  .step-item {
+    flex-direction: column;
+    padding: 1.25rem 0;
+    width: 100%;
+  }
+
+  .step-content {
+    width: 100%;
+  }
+
+  .step-content h3 {
+    font-size: 1.25rem;
+    padding: 10px 0;
+  }
+
+  .step-number {
+    font-size: 4.5rem;
+    line-height: 1;
+    text-align: left;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .lastPdiv {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 1.25rem;
+    width: 100%;
+  }
+
+  .consult-btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .consult-btn {
+    margin-left: 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1.75rem;
+  }
 }
