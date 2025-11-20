@@ -4,6 +4,8 @@ import bottom from "../assets/images/bottom.png";
 
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import { motion, AnimatePresence } from "motion/react";
+
 
 const Counter = ({ end, suffix = "" }) => {
   const { ref, inView } = useInView({
@@ -12,122 +14,181 @@ const Counter = ({ end, suffix = "" }) => {
   });
 
   return (
-    <h2 ref={ref}>
+    <motion.h2
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8 }}
+    >
       {inView && <CountUp start={0} end={end} duration={2} suffix={suffix} />}
-    </h2>
+    </motion.h2>
   );
 };
 
 const Services = () => {
   return (
     <div className="services-container">
-      
-      <div className="services-top-image">
-        <div className="overlay"></div>
-        <div className="top-image-text">
-          <h1>At Jones & Brown Legal, we are committed to <br /> 
-              exceptional service and successful outcomes with:</h1>
-          
-        </div>
-      </div>
 
+      
+      <motion.div
+        className="services-top-image"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2 }}
+      >
+        <div className="overlay"></div>
+        <motion.div
+          className="top-image-text"
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <h1>
+            At Jones & Brown Legal, we are committed to <br />
+            exceptional service and successful outcomes with:
+          </h1>
+        </motion.div>
+      </motion.div>
+
+      
       <section className="top-stats">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
           <Counter end={30} suffix="+" />
           <p>years of experience</p>
-        </div>
-        <div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
           <Counter end={98} suffix="%" />
           <p>success rate in court</p>
-        </div>
-        <div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+        >
           <Counter end={120} suffix="+" />
           <p>attorneys at hand</p>
-        </div>
+        </motion.div>
       </section>
 
       
       <section className="services-section">
-        <h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           Navigating Complex Legal Landscapes? <br />
           <span>We Can Help.</span>
-        </h2>
+        </motion.h2>
 
         <div className="service_section_content">
           
-          <div className="service-category">
-            <h4>Business and Corporate Law</h4>
-            <ul>
-              <ol>Business formation (LLC, corporations, partnerships)</ol>
-              <ol>Contract drafting and review</ol>
-              <ol>Mergers and acquisitions</ol>
-              <ol>Intellectual property protection</ol>
-              <ol>Employment law and workplace policies</ol>
-              <ol>Corporate governance</ol>
-              <ol>Shareholder and partnership disputes</ol>
-            </ul>
-          </div>
-
-          <div className="service-category">
-            <h4>Litigation and Dispute Resolution</h4>
-            <ul>
-              <ol>Civil litigation</ol>
-              <ol>Commercial litigation</ol>
-              <ol>Arbitration and mediation</ol>
-              <ol>Class action lawsuits</ol>
-              <ol>Personal injury claims</ol>
-              <ol>Product liability cases</ol>
-            </ul>
-          </div>
-
-          <div className="service-category">
-            <h4>Family Law</h4>
-            <ul>
-              <ol>Divorce and separation</ol>
-              <ol>Child custody and support</ol>
-              <ol>Prenuptial and postnuptial agreements</ol>
-              <ol>Adoption and surrogacy</ol>
-              <ol>Domestic violence protection</ol>
-            </ul>
-          </div>
-
-          <div className="service-category">
-            <h4>Criminal Defense</h4>
-            <ul>
-              <ol>DUI and traffic offenses</ol>
-              <ol>White collar crime defense</ol>
-              <ol>Drug charges</ol>
-              <ol>Assault and battery cases</ol>
-              <ol>Expungements and record sealing</ol>
-            </ul>
-          </div>
-
-          <div className="service-category">
-            <h4>Real Estate Law</h4>
-            <ul>
-              <ol>Property transactions (buying, selling, leasing)</ol>
-              <ol>Land use and zoning</ol>
-              <ol>Construction and land use</ol>
-              <ol>Real estate development</ol>
-            </ul>
-          </div>
-
-          <div className="service-category">
-            <h4>Immigration Law</h4>
-            <ul>
-              <ol>Visa applications</ol>
-              <ol>Green cards and citizenship</ol>
-              <ol>Deportation defense</ol>
-              <ol>Employment-based immigration</ol>
-            </ul>
-          </div>
-
+          {[
+            {
+              title: "Business and Corporate Law",
+              items: [
+                "Business formation (LLC, corporations, partnerships)",
+                "Contract drafting and review",
+                "Mergers and acquisitions",
+                "Intellectual property protection",
+                "Employment law and workplace policies",
+                "Corporate governance",
+                "Shareholder and partnership disputes",
+              ],
+            },
+            {
+              title: "Litigation and Dispute Resolution",
+              items: [
+                "Civil litigation",
+                "Commercial litigation",
+                "Arbitration and mediation",
+                "Class action lawsuits",
+                "Personal injury claims",
+                "Product liability cases",
+              ],
+            },
+            {
+              title: "Family Law",
+              items: [
+                "Divorce and separation",
+                "Child custody and support",
+                "Prenuptial and postnuptial agreements",
+                "Adoption and surrogacy",
+                "Domestic violence protection",
+              ],
+            },
+            {
+              title: "Criminal Defense",
+              items: [
+                "DUI and traffic offenses",
+                "White collar crime defense",
+                "Drug charges",
+                "Assault and battery cases",
+                "Expungements and record sealing",
+              ],
+            },
+            {
+              title: "Real Estate Law",
+              items: [
+                "Property transactions (buying, selling, leasing)",
+                "Land use and zoning",
+                "Construction and land use",
+                "Real estate development",
+              ],
+            },
+            {
+              title: "Immigration Law",
+              items: [
+                "Visa applications",
+                "Green cards and citizenship",
+                "Deportation defense",
+                "Employment-based immigration",
+              ],
+            },
+          ].map((service, index) => (
+            <motion.div
+              key={index}
+              className="service-category"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: index * 0.15 }}
+              viewport={{ once: true }}
+            >
+              <h4>{service.title}</h4>
+              <ul>
+                {service.items.map((item, i) => (
+                  <ol key={i}>{item}</ol>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
         </div>
       </section>
-     
-      <div className="services-bottom-image">
+
+      
+      <motion.div
+        className="services-bottom-image"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         <img src={bottom} alt="Trusted Legal Team" />
-      </div>
+      </motion.div>
     </div>
   );
 };
