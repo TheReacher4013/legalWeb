@@ -1,22 +1,25 @@
 import React from "react";
+import { motion } from "motion/react";
 import "../css/Footer.css";
-import logo from "../assets/images/group1.png"; 
+import logo from "../assets/images/group1.png";
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      
+    <motion.footer
+      className="footer"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="footer-header">
         <img src={logo} alt="Jones & Brown Legal Logo" className="footer-logo" />
         <h2 className="footer-title">Jones & Brown Legal</h2>
       </div>
 
-      
       <p className="footer-tagline">
         Deep expertise, decisive courtroom presence
       </p>
 
-      
       <div className="footer-middle">
         <div className="footer-column">
           <p><a href="mailto:hello@figma.com">hello@figma.com</a></p>
@@ -37,11 +40,12 @@ export default function Footer() {
         </div>
       </div>
 
-      
       <div className="footer-bottom">
-        <p>Jones & Brown Legal<br />
-        © 2025 All Rights Reserved</p>
+        <p>
+          Jones & Brown Legal<br />
+          © 2025 All Rights Reserved
+        </p>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
