@@ -1,23 +1,30 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import "../css/about.css";
 
-// Variants for staggered animation
+// Container animation (optional)
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.2, // stagger effect between children
-            delayChildren: 0.1,
+            staggerChildren: 1.2,
+            delayChildren: 1.1,
         },
     },
 };
 
+// Children animation
 const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1} },
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, 
+        
+        transition: { 
+            duration: 1.8,
+            // ease:"easeOut"
+
+        } },
 };
 
 const About = () => {
@@ -26,7 +33,8 @@ const About = () => {
             className="welcome-section"
             variants={containerVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"        // 👈 scroll aate hi animate
+            viewport={{ once: true, amount: 0.2 }} // 👈 20% visible hote hi start
         >
             {/* Title */}
             <motion.h1 className="title" variants={itemVariants}>

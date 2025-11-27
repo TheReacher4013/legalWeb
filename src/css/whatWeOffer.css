@@ -9,14 +9,12 @@
     justify-content: center;
     align-items: flex-start;
     padding: 3.75rem;
-    /* 60px */
     gap: 3.75rem;
-    /* 60px */
     font-family: "Geist", sans-serif;
 }
 
 .offer-left {
-    flex: 1;
+    flex: 0.2;
     display: flex;
     justify-content: flex-end;
 }
@@ -24,66 +22,52 @@
 .offer-heading {
     font-family: "Geist", sans-serif;
     font-size: 1.75rem;
-    /* 28px */
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.5px;
     color: #F7F4EB;
     margin: 0;
-    padding: 0;
+    padding-top: 2.1rem;
     display: flex;
     align-items: flex-start;
 }
 
 .offer-right {
-    flex: 2;
+    flex: 0.8;
 }
 
 .offer-list {
-    font-size: 2.375rem;
-    /* 38px */
+    padding: 20px;
+    font-size: 4.2rem;
     line-height: 1.2;
-    font-weight: 500;
+    font-weight: 600;
 }
-
 .more {
     color: #FFF0C4;
 }
-
 .seri-button {
     margin-top: 2.1875rem;
-    /* 35px */
     margin-bottom: 1.5625rem;
-    /* 25px */
     padding: 0.75rem 1.125rem;
-    /* 12px 18px */
     background: #FFFFFF;
     color: #000000;
     border-radius: 6.5625rem;
-    /* 105px */
     cursor: pointer;
     display: inline-block;
     font-size: 0.875rem;
-    /* 14px */
     font-family: inherit;
     text-decoration: none;
     transition: 0.2s ease;
 }
-
 .seri-button:hover {
     transform: scale(1.05);
 }
-
-/* Mobile: ≤480px */
 @media screen and (max-width: 30rem) {
 
     .offer-list p,
     .offer-more {
         font-size: 1.5rem;
-        /* 24px */
     }
 }
-
-/* Tablet: ≤1024px */
 @media screen and (max-width: 64rem) {
 
     .offer-section {
@@ -91,9 +75,7 @@
         text-align: left;
         flex-direction: column;
         gap: 1.875rem;
-        /* 30px */
         padding: 2.5rem 1.25rem;
-        /* 40px 20px */
     }
 
     .offer-left {
@@ -110,13 +92,19 @@
         text-align: center;
     }
 }
-
-/* Small Tablet / Mobile: ≤768px */
 @media screen and (max-width: 48rem) {
+    .offer-section {
+        padding: .875rem 1.5625rem;
+    }
+
+   .offer-list {
+       font-size: 1.5rem;
+       line-height: 1.5;
+       margin-left: -1rem;
+   }
 
     .offer-title h2 {
-        font-size: 1.375rem;
-        /* 22px */
+        font-size: 2.375rem;
         text-align: right;
     }
 
@@ -125,14 +113,8 @@
         text-align: right;
     }
 
-    .offer-list p {
-        font-size: 0.9375rem;
-        /* 15px */
-    }
-
     .offer-btn button {
         width: 100%;
         font-size: 1rem;
-        /* 16px */
     }
 }

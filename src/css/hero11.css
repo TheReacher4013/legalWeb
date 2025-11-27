@@ -83,16 +83,18 @@
 
     .hero_section {
         height: auto;
-        background-size: contain;
+        background-size:cover;
         background-position: center;
         background-color: #000;
-        aspect-ratio: 2 / 2.2;
-        padding: 1.875rem 0.9375rem;
+        /* aspect-ratio: 2 / 2.2; */
+        /* padding: 1.875rem 0.9375rem; */
+        padding:1rem 1rem;
 
     }
 
     .hero_section .hero_heading {
-        font-size: 2rem;
+        padding: 5.875rem ;
+        font-size: 1.5rem;
         text-align: center;
     }
 

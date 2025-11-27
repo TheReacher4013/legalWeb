@@ -5,6 +5,7 @@
     width: 100%;
     height: 28.125rem;
     overflow: hidden;
+    font-family: "Geist", sans-serif;
 }
 .help-image {
     width: 100%;
@@ -13,41 +14,56 @@
     filter: brightness(50%);
     display: block;
 }
+
 .help-text {
     position: absolute;
     bottom: 0.625rem;
     left: 0.625rem;
     display: flex;
+    align-items: center;
+    justify-content: flex-start;
     font-size: 6.25rem;
     font-weight: 400;
     color: #FFFFFF;
     line-height: 1.25;
 
-    margin-right: 12.5rem;
-
+    margin-left: 3rem;
 }
-
 @media screen and (max-width: 768px) {
+
     .help-container {
         height: 18.75rem;
     }
 
     .help-text {
-        font-size: 2.25rem;
+        font-size: 4.25rem;
         bottom: 0.5rem;
         left: 0.5rem;
+        margin-left: 0;
     }
 }
 @media screen and (max-width: 480px) {
+
     .help-container {
         height: 15.625rem;
-    
     }
 
     .help-text {
         font-size: 1.75rem;
         bottom: 0.375rem;
         left: 0.375rem;
+        margin-left: 0;
+    }
+}
 
+@media screen and (max-width: 480px) {
+
+    .help-container {
+        height: 15.625rem;
+    }
+    .help-text {
+        font-size: 1.75rem;
+        bottom: 0.375rem;
+        left: 0.375rem;
     }
 }

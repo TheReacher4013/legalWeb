@@ -1,86 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 
-.steps-container {
+/* MAIN CONTAINER */
+.ready-container {
   background: #1F0808;
   color: #FFFFFF;
   padding: 5rem 2.5rem;
   font-family: Arial, sans-serif;
 }
 
-
-.steps-title {
+/* TITLE */
+.ready-title {
   font-size: 1.75rem;
   margin-bottom: 2.5rem;
-  margin-right: 25rem;
-  line-height: 1.4;
   text-align: left;
 }
 
-
-.step-item {
+/* EACH STEP BLOCK */
+.ready-step-item {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   align-items: flex-start;
-  padding: 2.5rem 0;
-  gap: 2.5rem;
+  max-width: 80%;
+  margin: auto;
+  gap: 2rem;
+  padding: 5rem 0;
+  border-bottom: 1px solid #FFF;
+  border-top: 1px solid #FFF;
 }
 
-.step-content {
-  max-width: 37.5rem;
-  text-align: left;
+/* STEP NUMBER */
+.ready-step-number {
+  font-size: 16rem;
+  font-weight: 200;
+  line-height: 0.8;
 }
 
-.step-content h3 {
-  padding-top: 1.875rem;
-  padding-bottom: 1.875rem;
-  font-size: 1.375rem;
-  margin-bottom: 0.625rem;
-  margin-right: 18.75rem;
+/* RIGHT SIDE CONTENT */
+.ready-step-content {
+  width: 40%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
 }
 
-.step-content p {
-  margin: 0;
+.ready-step-content h3,
+.ready-step-content p {
+  font-size: 1.1rem;
+  font-weight: normal;
 }
 
-.step-number {
-  font-size: 13.75rem;
-  font-weight: 300;
-  min-width: 6.25rem;
-  text-align: right;
-  margin-left: 9.375rem;
-}
-
-hr {
-  border: none;
-  border-bottom: 1px solid #FFFFFF;
-}
-
-
-.lastPdiv {
+/* LAST LINE */
+.ready-last-text {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 2.5rem;
-  margin-left: 4rem;
+  gap: 2rem;
+  margin-left: 7.8rem;
   padding-top: 5rem;
 }
 
-.lastPdiv p {
-  font-size: 1.875rem;
-  font-weight: 300;
+.ready-last-text p {
+  font-size: 1.5rem;
+  font-weight: normal;
 }
 
-.consult-btn-wrapper {
+/* BUTTON */
+.ready-btn-wrapper {
   width: fit-content;
-  margin-left: auto;
+  margin-left:49rem;
 }
 
-.consult-btn {
+.ready-btn {
   background: #FFFFFF;
   color: #000000;
   border: none;
-  border-radius: 1.875rem;
+  border-radius: 30px;
   font-size: 1rem;
   font-weight: 600;
   padding: 0.875rem 2.125rem;
@@ -90,97 +85,106 @@ hr {
   text-decoration: none;
 }
 
+/* TABLET */
 @media screen and (max-width: 64rem) {
-  hr {
-    width: calc(100% - 3rem);
-    margin-left: 3rem;
-    margin-right: 3rem;
+  .ready-title {
+      margin: 0 0 1rem 0;
+      /* font-size: 1.3rem; */
+      margin-left:4.7rem;
+  
+    }
+        /* .ready-last-text p {
+          font-size: 1.5rem;
+          font-weight: normal;
+          margin-right:5rem;
+        } */
+
+  .ready-step-item {
+    gap: 1.5rem;
+    padding: 2rem 0;
   }
 
-  .steps-title {
-    margin-left: 3rem;
-    font-size: 1.5rem;
+  .ready-step-number {
+    font-size: 8rem;
+    width: 25%;
   }
 
-  .step-content {
-    max-width: 28rem;
+  .ready-step-content {
+    width: 75%;
   }
 
-  .step-number {
-    font-size: 10rem;
-    margin-left: .5rem;
+  /* TABLET BUTTON FIX */
+  .ready-btn-wrapper {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    justify-content: flex-start;
+    /* tablet me left align sahi lagta hai */
+    /* margin-top: 2rem; */
+
   }
 
-  .lastPdiv {
-    margin-left: 3rem;
-    gap: 1.25rem;
-  }
 
-  .consult-btn {
-    margin-bottom: 1.2em;
-    padding: 0.8rem 2rem;
+  .ready-btn {
+    margin: 0;
+    margin-left: 28rem;
   }
 }
 
-
+/* MOBILE */
 @media screen and (max-width: 48rem) {
-  * {
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .steps-container {
+  .ready-container {
     padding: 2rem 1rem;
-    overflow-x: hidden;
   }
 
-  .steps-title {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: 500;
-    width: 100%;
+  .ready-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    margin-left: 1.2rem;
+    
   }
 
-  .step-item {
+  .ready-step-item {
     flex-direction: column;
-    padding: 1.25rem 0;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+
+  .ready-step-number {
+    font-size: 4.5rem;
     width: 100%;
   }
 
-  .step-content {
+  .ready-step-content {
     width: 100%;
   }
 
-  .step-content h3 {
-    font-size: 1.25rem;
+  .ready-step-content h3 {
     padding: 10px 0;
   }
 
-  .step-number {
-    font-size: 4.5rem;
-    line-height: 1;
-    text-align: left;
-    margin-left: 0;
-    width: 100%;
-  }
-
-  .lastPdiv {
+  .ready-last-text {
     flex-direction: column;
     margin-left: 0;
-    gap: 1.25rem;
     width: 100%;
   }
 
-  .consult-btn-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .consult-btn {
-    margin-left: 0;
-    margin-top: 2rem;
+  .ready-last-text p {
+    font-size: 20px;
+    margin-right: 3rem;
     margin-bottom: 1rem;
-    padding: 0.75rem 1.75rem;
+  }
+
+  /* ⭐ MOBILE BUTTON FIX - CENTER */
+  .ready-btn-wrapper {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .ready-btn {
+    margin: 0;
   }
 }

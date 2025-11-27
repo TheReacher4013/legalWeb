@@ -1,6 +1,7 @@
 .banner1-section {
     width: 100%;
     overflow: hidden;
+    background-position: fixed;
 }
 
 .banner1 {
