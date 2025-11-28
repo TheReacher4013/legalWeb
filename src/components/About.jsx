@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../css/about.css";
 
-// Container animation (optional)
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -14,15 +13,12 @@ const containerVariants = {
         },
     },
 };
-
-// Children animation
 const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, 
         
         transition: { 
             duration: 1.8,
-            // ease:"easeOut"
 
         } },
 };
@@ -33,15 +29,13 @@ const About = () => {
             className="welcome-section"
             variants={containerVariants}
             initial="hidden"
-            whileInView="visible"        // 👈 scroll aate hi animate
-            viewport={{ once: true, amount: 0.2 }} // 👈 20% visible hote hi start
+            whileInView="visible" 
+            viewport={{ once: true, amount: 0.2 }} 
         >
-            {/* Title */}
             <motion.h1 className="title" variants={itemVariants}>
                 Welcome to Jones & Brown Legal
             </motion.h1>
 
-            {/* Content */}
             <motion.div className="content">
                 <motion.p className="text-block" variants={itemVariants}>
                     Jones & Brown Legal has been a pillar of the Los Angeles legal
@@ -61,7 +55,6 @@ const About = () => {
                 </motion.p>
             </motion.div>
 
-            {/* Button */}
             <motion.div variants={itemVariants} whileTap={{ scale: 0.95 }}>
                 <NavLink to="/consult" className="consult-button">
                     Schedule a Consult

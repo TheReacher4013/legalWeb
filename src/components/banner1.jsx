@@ -16,8 +16,8 @@ const Banner1 = () => {
                 }}
                 initial={{ opacity: 0, x: -120, rotate: -4 }}
                 whileInView={{ opacity: 1, x: 0, rotate: 0 }}
-                transition={{ duration: 1.8, ease: "easeOut" }}  // 👈 slow, smooth
-                viewport={{ once: false, amount: 0.4 }}  // 👈 scroll reveal trigger
+                transition={{ duration: 1.8, ease: "easeOut" }}  
+                viewport={{ once: false, amount: 0.4 }}  
             ></motion.div>
         </section>
     );
