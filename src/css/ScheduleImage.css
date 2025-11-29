@@ -22,12 +22,11 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    font-size: 6.25rem;
+    font-size: 8.25rem;
     font-weight: 400;
     color: #FFFFFF;
     line-height: 1.25;
-
-    margin-left: 3rem;
+    margin-left: 3.5rem;
 }
 @media screen and (max-width: 768px) {
 
@@ -56,13 +55,14 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 
     .help-container {
         height: 15.625rem;
     }
     .help-text {
-        font-size: 1.75rem;
+        font-weight: 3rem;
+        font-size:5.3rem;
         bottom: 0.375rem;
         left: 0.375rem;
     }
