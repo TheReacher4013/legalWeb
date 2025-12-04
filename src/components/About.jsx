@@ -1,23 +1,26 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import "../css/about.css";
 
-// Variants for staggered animation
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.2, // stagger effect between children
-            delayChildren: 0.1,
+            staggerChildren: 1.2,
+            delayChildren: 1.1,
         },
     },
 };
-
 const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 1} },
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, 
+        
+        transition: { 
+            duration: 1.8,
+
+        } },
 };
 
 const About = () => {
@@ -26,14 +29,13 @@ const About = () => {
             className="welcome-section"
             variants={containerVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible" 
+            viewport={{ once: true, amount: 0.2 }} 
         >
-            {/* Title */}
             <motion.h1 className="title" variants={itemVariants}>
                 Welcome to Jones & Brown Legal
             </motion.h1>
 
-            {/* Content */}
             <motion.div className="content">
                 <motion.p className="text-block" variants={itemVariants}>
                     Jones & Brown Legal has been a pillar of the Los Angeles legal
@@ -53,7 +55,6 @@ const About = () => {
                 </motion.p>
             </motion.div>
 
-            {/* Button */}
             <motion.div variants={itemVariants} whileTap={{ scale: 0.95 }}>
                 <NavLink to="/consult" className="consult-button">
                     Schedule a Consult

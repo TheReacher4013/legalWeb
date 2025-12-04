@@ -5,21 +5,22 @@ import "../css/testimonial.css";
 
 const testimonials = [
     {
-        text: `Jones & Brown Legal handled my estate planning with such care and professionalism. 
-They listened to my concerns and made the process clear and straightforward. 
-I now have complete peace of mind knowing my family's future is secure.`,
+        text: `"Jones & Brown Legal handled my estate
+        planning with such care and professionalism. 
+        They listened to my concerns and made the process clear and straightforward. 
+I now have complete peace of mind knowing my family's future is secure."`,
         author: "David L, Business Owner",
     },
     {
-        text: `Their expertise and courtroom presence were truly impressive. They turned a stressful situation into a successful outcome.`,
+        text: `"Their expertise and courtroom presence were truly impressive. They turned a stressful situation into a successful outcome."`,
         author: "Sarah P, Entrepreneur",
     },
     {
-        text: `I was very impressed with the responsiveness and knowledge of everyone at Jones & Brown Legal. I felt like they really cared about my case, and they fought hard to get me a great result.`,
+        text: `"I was very impressed with the responsiveness and knowledge of everyone at Jones & Brown Legal. I felt like they really cared about my case, and they fought hard to get me a great result."`,
         author: "Thomas P., Individual Client",
     },
     {
-        text: `Their attention to detail and proactive communication made the entire process smooth and stress-free. I felt completely supported every step of the way.`,
+        text: `"Their attention to detail and proactive communication made the entire process smooth and stress-free. I felt completely supported every step of the way."`,
         author: "Robert P., Real Estate Investor",
     },
 ];

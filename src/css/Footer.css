@@ -5,7 +5,7 @@
   color: #111;
   font-family: 'Geist', sans-serif;
   padding: 3.75rem 6.25rem;
-  /* 60px 100px */
+
 }
 
 .footer-header {
@@ -13,15 +13,12 @@
   align-items: center;
   justify-content: flex-start;
   gap: 1.25rem;
-  /* 20px */
   margin-bottom: 1.25rem;
-  /* 20px */
   flex-wrap: wrap;
 }
 
 @media (max-width: 31.25rem) {
 
-  /* 500px */
   .footer-header {
     gap: 0;
     justify-content: center;
@@ -33,13 +30,11 @@
 
   .footer-logo {
     width: 2.25rem;
-    /* 36px */
   }
 }
 
 .footer-logo {
   width: 2.25rem;
-  /* 36px */
   height: auto;
   object-fit: contain;
 }
@@ -55,7 +50,6 @@
   font-size: 1rem;
   color: #333;
   margin-bottom: 3.125rem;
-  /* 50px */
 }
 
 .footer-middle {
@@ -63,21 +57,16 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 5.625rem;
-  /* 90px */
   margin-bottom: 3.75rem;
-  /* 60px */
 }
 
 .footer-column {
   flex: 1 1 15.625rem;
-  /* 250px */
   min-width: 12.5rem;
-  /* 200px */
 }
 
 .footer-column p {
   margin: 0.3125rem 0;
-  /* 5px */
 }
 
 .footer-column a {
@@ -93,42 +82,32 @@
   font-size: 0.9rem;
   color: #111;
   border-top: 0.0625rem solid #ddd;
-  /* 1px */
   padding-top: 1.25rem;
-  /* 20px */
   text-align: left;
   margin-top: 2.5rem;
-  /* 40px */
   line-height: 1.6;
 }
 
 .footer-bottom p {
   margin: 0;
 }
-
-/* Responsive CSS */
 @media (max-width: 56.25rem) {
 
-  /* 900px */
   .footer {
     padding: 2.5rem 1.25rem;
-    /* 40px 20px */
     text-align: left;
   }
 
   .footer-header {
     justify-content: left;
     gap: 25rem;
-    /* 400px */
     gap: 1.25rem;
-    /* fallback? */
   }
 
   .footer-middle {
     flex-direction: row;
     align-items: center;
     gap: 0.8125rem;
-    /* 13px */
   }
 
   .footer-column {
@@ -138,20 +117,15 @@
   .footer-bottom {
     text-align: left;
     padding-top: 0.9375rem;
-    /* 15px */
     margin-top: 1.875rem;
-    /* 30px */
   }
 }
 
 @media (max-width: 31.25rem) {
-
-  /* 500px */
   .footer-header {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
     gap: 0.5rem;
-    /* 8px */
   }
 }

@@ -5,7 +5,7 @@ import End1 from "../assets/images/Ennd.jpg";
 
 const ImageSection = () => {
     return (
-        <motion.div
+        <motion.section
             className="help-container"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -18,6 +18,7 @@ const ImageSection = () => {
                 animate={{ scale: 1 }}
                 transition={{ duration: 1, ease: "easeOut" }}
             />
+
             <motion.div
                 className="help-text"
                 initial={{ y: 20, opacity: 0 }}
@@ -26,7 +27,7 @@ const ImageSection = () => {
             >
                 Let us help you
             </motion.div>
-        </motion.div>
+        </motion.section>
     );
 };
 
