@@ -49,7 +49,6 @@ const TestimonialSection = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
             >
                 We believe that our clients’ experiences speak volumes about the quality of our legal services.
-                Here's what some of them have to say.
             </motion.p>
 
             <div className="testimonial-box">
@@ -104,8 +103,7 @@ const TestimonialSection = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
             >
-                Let us help you navigate your legal journey with confidence and peace of mind.
-                Contact Jones & Brown Legal today.
+                Let us help you navigate your legal journey with confidence.
             </motion.p>
 
             <motion.div

@@ -7,6 +7,7 @@
     font-family: "Geist", sans-serif;
     background: #ffffff;
 }
+
 .testimonial-title {
     font-size: 40px;
     font-weight: 700;
@@ -14,6 +15,7 @@
     margin-bottom: 30px;
     color: #000000;
 }
+
 .testimonial-subtitle {
     font-size: 18px;
     max-width: 620px;
@@ -22,6 +24,7 @@
     color: #000000;
     font-weight: 500;
 }
+
 .testimonial-box {
     display: flex;
     flex-direction: column;
@@ -33,7 +36,10 @@
     width: 650px;
     height: 450px;
     margin: 0 auto;
+    position: relative;
 }
+
+
 .testimonial-text {
     font-size: 22px;
     font-weight: 600;
@@ -42,6 +48,7 @@
     margin-bottom: 25px;
     text-align: center;
 }
+
 .testimonial-author {
     font-size: 18px;
     font-weight: 600;
@@ -49,11 +56,16 @@
     color: #000000;
 }
 
+
 .testimonial-controls {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
-    gap: 20px;
+    width: 100%;
+    gap: 15px;
+    margin-top: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .arrow {
@@ -66,7 +78,7 @@
 
 .dots {
     display: flex;
-    gap: 8px;
+    gap: 10px;
 }
 
 .dot {
@@ -105,8 +117,9 @@
     transition: 0.3s ease;
     text-decoration: none;
 }
-@media (max-width: 480px) {
 
+/* Responsive */
+@media (max-width: 480px) {
     .testimonial-box {
         width: 300px;
         height: 350px;
@@ -129,10 +142,18 @@
     .testimonial-subtitle {
         font-size: 13px;
     }
+
+    .arrow {
+        font-size: 20px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
     .testimonial-section {
         padding: 80px 20px;
     }

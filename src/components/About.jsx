@@ -18,7 +18,7 @@ const itemVariants = {
     visible: { opacity: 1, y: 0, 
         
         transition: { 
-            duration: 1.8,
+            duration: 0.8,
 
         } },
 };

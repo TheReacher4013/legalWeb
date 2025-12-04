@@ -6,6 +6,9 @@
     height: 28.125rem;
     overflow: hidden;
     font-family: "Geist", sans-serif;
+background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    min-height: 100vh;
 }
 .help-image {
     width: 100%;

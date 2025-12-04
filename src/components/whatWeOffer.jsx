@@ -31,11 +31,11 @@ const WhatWeOffer = () => {
 
             {/* RIGHT LIST */}
             <motion.div
-                className='offer-right'
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 2.8, delay: 2.1, ease: "easeOut" }}
-                viewport={{ once: false, amount: 0.3 }}
+              className='offer-right'
+            //     initial={{ opacity: 0, x: 50 }}
+            //     whileInView={{ opacity: 1, x: 0 }}
+            //     transition={{ duration: 2.8, delay: 2.1, ease: "easeOut" }}
+            //     viewport={{ once: false, amount: 0.3 }}
             >
                 <motion.h1
                     className='offer-list'

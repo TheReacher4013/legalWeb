@@ -40,41 +40,64 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    font-weight: 400;
+    font-weight: 300;
     width: 100%;
     max-width: 75rem;
+    font-size: 1.5rem;
+    margin-right: 10rem;
 }
 
 .hero_section .hero_subheading p {
     display: flex;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: 400;
     max-width: 50rem;
 
 }
-
 @media screen and (max-width: 64rem) {
 
     .hero_section {
-        min-height: auto;
-        height: auto;
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         background-color: #000;
-        aspect-ratio: 4 / 2.7;
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
-
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+        text-align: center;
     }
-
     .hero_section .hero_heading {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        padding: 0 1rem;
         text-align: center;
     }
-
     .hero_section .hero_subheading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
+        gap: 0.8rem;
+        width: 100%;
+        padding: 0 1.5rem;
+        margin-top: 1rem;
+    }
+    .hero_section .hero_subheading h2 {
+        font-size: 1.3rem;
+        font-weight: 600;
         text-align: center;
+        line-height: 1.4;
+        max-width: 30rem;
+    }
+
+  
+    .hero_section .hero_subheading p {
+        font-size: 1.1rem;
+        font-weight: 300;
+        line-height: 1.5;
+        max-width: 30rem;
+        text-align: center;
+        opacity: 0.9;
     }
 }
 

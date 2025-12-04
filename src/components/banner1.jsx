@@ -14,10 +14,10 @@ const Banner1 = () => {
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                 }}
-                initial={{ opacity: 0, x: -120, rotate: -4 }}
-                whileInView={{ opacity: 1, x: 0, rotate: 0 }}
-                transition={{ duration: 1.8, ease: "easeOut" }}  
-                viewport={{ once: false, amount: 0.4 }}  
+                initial={{ opacity: 0, scale: 0.9, y: 40 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
             ></motion.div>
         </section>
     );
